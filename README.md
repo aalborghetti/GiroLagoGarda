@@ -35,22 +35,18 @@ La cartella pronta da pubblicare è `mappa_gpx_originali_da_desenzano`.
 - `tracce_gpx.html`: mappa interattiva delle nove tracce GPX originali,
   rinumerate con partenza da Desenzano.
 - `tappe.html`: programma giornaliero con lunghezza, dislivelli, tempi,
-  pernottamenti e collegamenti meteo.
+  contatti completi dei pernottamenti, meteo, piano B e rientri.
 - `materiale.html`: checklist dello zaino da 40 litri e indicazioni per
   distribuire il materiale.
-- `supporto.html`: accesso agli strumenti da usare durante il viaggio.
-- `emergenza.html`: 112, posizione GPS e scheda ICE privata.
-- `piano_b.html`: possibilità di rinuncia e collegamenti ai trasporti.
-- `pernottamenti.html`: indirizzi e contatti pubblici delle strutture.
 - `check_serale.html`: controlli da eseguire prima di ogni tappa.
 - `servizi.html`: ricerche rapide per farmacie, alimentari, ristorazione e
   acqua.
-- `diario.html`: diario locale con esportazione in formato JSON.
-- `da_completare.html`: verifiche personali e informazioni ancora incerte.
 - `01_...gpx`–`09_...gpx`: copie integre dei GPX originali nell'ordine di
   percorrenza.
 - `leaflet.js` e `leaflet.css`: libreria cartografica inclusa localmente.
 - `site.js`, `sw.js` e `manifest.webmanifest`: installazione e cache offline.
+- `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `icon-192.png` e
+  `icon-512.png`: icona del sito e della schermata Home su iPhone.
 - `.nojekyll`: impedisce a GitHub Pages di elaborare il sito con Jekyll.
 
 La mappa principale mostra le **tracce originali** del tour. Le distanze della
@@ -87,16 +83,16 @@ Non servono compilazione, dipendenze o database.
 
 ## Salvataggio dei dati
 
-Checklist, scheda di emergenza, appunti e diario utilizzano `localStorage` del
-browser. I dati:
+Le checklist del materiale e del controllo serale utilizzano `localStorage`
+del browser. I dati:
 
 - rimangono sul dispositivo;
 - non vengono inviati a un server;
 - non sono sincronizzati tra telefoni o browser;
 - vengono persi cancellando i dati del sito.
 
-Il diario può essere esportato in JSON. Per la scheda sanitaria e le conferme
-di prenotazione è consigliabile conservare anche una copia privata offline.
+Per contatti ICE, dati sanitari e conferme di prenotazione è consigliabile
+conservare una copia privata offline, separata dal sito pubblico.
 
 ## Avvisi e limiti
 
@@ -129,19 +125,6 @@ degli enti gestori o valutazione delle condizioni sul posto.
 - [ATV Verona – orari extraurbani](https://tech.atv.verona.it/atv_www/orari_extraurb/orari/atv_localita_G.html)
 - [Arriva Brescia – orari invernali 2026/27](https://brescia.arriva.it/orari-invernali-2026-27/)
 - [Trentino Trasporti – Alto Garda](https://www.trentinotrasporti.it/it/viaggia-con-noi/urbano/alto-garda)
-- [AREU – app Where Are U](https://www.areu.lombardia.it/web/home/app-where-are-u)
 - [Leaflet](https://leafletjs.com/) e [OpenTopoMap](https://opentopomap.org/)
 
 Le informazioni operative sono state ricontrollate il **30 settembre 2026**.
-
-## Rigenerazione
-
-Il comando seguente ricrea la cartella pubblicabile e il relativo archivio ZIP:
-
-```bash
-python genera_mappa_originali.py
-```
-
-Il generatore copia i GPX originali senza modificarne il contenuto, ricrea le
-pagine e aggiorna la cache offline.
-

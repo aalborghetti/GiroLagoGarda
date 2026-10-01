@@ -7,8 +7,8 @@
 <style>
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#17212b;background:#eef2ed;line-height:1.45}
 *{box-sizing:border-box}body{margin:0}.wrap{max-width:960px;margin:auto;padding:0 16px 40px}
-header{background:#183f63;color:#fff;padding:22px 0 18px}header .wrap{padding-bottom:0}h1{font-size:25px;margin:0 0 5px}
-h2{font-size:20px;margin:25px 0 10px}p{margin:6px 0}.back{display:inline-block;color:#fff;margin-bottom:13px;text-decoration:none;border:1px solid #9db4c8;border-radius:7px;padding:6px 10px}
+header{background:linear-gradient(135deg,#123a5c,#176b69);color:#fff;padding:24px 0 22px}header .wrap{padding-bottom:0}h1{font-size:30px;line-height:1.15;margin:0 0 7px}
+h2{font-size:20px;margin:25px 0 10px}p{margin:6px 0}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.nav a{color:#fff;text-decoration:none;background:#ffffff18;border:1px solid #ffffff35;border-radius:8px;padding:7px 10px;font-weight:700;font-size:14px}
 .lead{color:#e9f1f7}.dashboard{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.metric{background:#fff;color:#17212b;border-radius:9px;padding:12px}.metric strong{display:block;font-size:21px;color:#183f63}
 .progress{height:10px;background:#dce3dd;border-radius:9px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;width:0;background:#16815f;transition:width .2s}
 .controls{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.controls button,.controls select,.controls input{font:inherit;border:1px solid #aab5ad;border-radius:7px;background:#fff;padding:8px 10px}.controls button{cursor:pointer}
@@ -18,12 +18,12 @@ details{background:#fff;border:1px solid #d4dcd5;border-radius:10px;margin:10px 
 table{width:100%;border-collapse:collapse;background:#fff;border-radius:9px;overflow:hidden}th,td{text-align:left;padding:9px;border-bottom:1px solid #e3e8e3}th{background:#183f63;color:#fff}td:last-child{font-weight:700;white-space:nowrap}
 .notice{background:#fff8dd;border-left:5px solid #d69e00;padding:12px 14px;border-radius:7px;margin:14px 0}.weather a{color:#174e78}.notes{width:100%;min-height:110px;border:1px solid #aab5ad;border-radius:8px;padding:10px;font:inherit}
 .avoid{background:#fff1f1;border-left-color:#b43b42}.foot{font-size:13px;color:#5d6862;margin-top:22px}
-@media(max-width:680px){.wrap{padding-left:11px;padding-right:11px}h1{font-size:22px}.dashboard{grid-template-columns:1fr}.items,.pack{grid-template-columns:1fr}table{font-size:13px}th,td{padding:8px 6px}.hide-mobile{display:none}}
-@media print{header{background:#fff;color:#000;padding:0}.back,.controls{display:none}.wrap{max-width:none}.items{grid-template-columns:1fr 1fr}details{break-inside:avoid}details:not([open])>*:not(summary){display:block}.notes{border:1px solid #aaa}}
+@media(max-width:680px){.wrap{padding-left:11px;padding-right:11px}header{padding-top:16px}h1{font-size:25px}.nav a{padding:8px 9px}.dashboard{grid-template-columns:1fr}.items,.pack{grid-template-columns:1fr}table{font-size:13px}th,td{padding:8px 6px}.hide-mobile{display:none}}
+@media print{header{background:#fff;color:#000;padding:0}.nav,.controls{display:none}.wrap{max-width:none}.items{grid-template-columns:1fr 1fr}details{break-inside:avoid}details:not([open])>*:not(summary){display:block}.notes{border:1px solid #aaa}}
 </style>
-<link rel="manifest" href="manifest.webmanifest"></head>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Giro Garda"></head>
 <body>
-<header><div class="wrap"><a class="back" href="index.html">⌂ Home</a> <a class="back" href="tracce_gpx.html">⌖ Tracce GPX</a> <a class="back" href="tappe.html">☰ Tappe</a> <a class="back" href="supporto.html">✚ Supporto</a><h1>Materiale per il Grande Giro del Garda</h1><p class="lead">Checklist per nove giorni a piedi con pernottamento in struttura e zaino da 40 litri.</p>
+<header><div class="wrap"><nav class="nav"><a href="index.html">⌂ Home</a><a href="tracce_gpx.html">⌖ Tracce GPX</a><a href="tappe.html">☰ Tappe</a><a href="materiale.html">🎒 Materiale</a><a href="check_serale.html">✓ Check serale</a><a href="servizi.html">⌕ Servizi</a></nav><h1>Materiale per il Grande Giro del Garda</h1><p class="lead">Checklist per nove giorni a piedi con pernottamento in struttura e zaino da 40 litri.</p>
 <div class="dashboard"><div class="metric"><strong id="progressText">0 / 0</strong>elementi preparati<div class="progress"><span id="progressBar"></span></div></div><div class="metric"><strong>6,5–8 kg</strong>peso base consigliato</div><div class="metric"><strong id="totalWeight">9,4 kg</strong>stima con acqua e cibo</div></div></div></header>
 <main class="wrap">
 <div class="controls"><label>Acqua <select id="water"><option value="1.5">1,5 L</option><option value="2" selected>2 L</option><option value="2.5">2,5 L</option><option value="3">3 L</option></select></label><label>Cibo <input id="food" type="number" min="0.3" max="1.5" step="0.1" value="0.7" size="4"> kg</label><button id="reset">Azzera checklist</button><button onclick="window.print()">Stampa</button></div>
