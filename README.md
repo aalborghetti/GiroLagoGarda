@@ -45,8 +45,8 @@ La cartella pronta da pubblicare è `mappa_gpx_originali_da_desenzano`.
   percorrenza.
 - `leaflet.js` e `leaflet.css`: libreria cartografica inclusa localmente.
 - `site.js`, `sw.js` e `manifest.webmanifest`: installazione e cache offline.
-- `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `icon-192.png` e
-  `icon-512.png`: icona del sito e della schermata Home su iPhone.
+- `favicon.ico`, `apple-touch-icon.png`, `icon-192.png` e `icon-512.png`:
+  icona del sito e della schermata Home su iPhone.
 - `.nojekyll`: impedisce a GitHub Pages di elaborare il sito con Jekyll.
 
 La mappa principale mostra le **tracce originali** del tour. Le distanze della
