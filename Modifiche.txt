@@ -1,0 +1,5 @@
+rimuovi la sezione alloggi da supporto e aggiungi quelle informazioni nella sezione tappe, migliorando i dati già presenti.
+Rimuovi la sezione diario
+rimuovi da servizi utili le sezioni Numeri e servizi sanitari e Appunti sui rifornimenti
+rimuovi da emergenza la sezione Scheda privata sul dispositivo
+rimuovi la scheda supporto e rendi ogni sezione della scheda supporto una scheda a sé 
