@@ -1,4 +1,4 @@
-const CACHE='garda-2026-v7';
+const CACHE='garda-2026-v10';
 const FILES=[
   './',
   './index.html',
@@ -11,7 +11,6 @@ const FILES=[
   './leaflet.js',
   './site.js',
   './manifest.webmanifest',
-  './favicon.svg',
   './favicon.ico',
   './apple-touch-icon.png',
   './icon-192.png',

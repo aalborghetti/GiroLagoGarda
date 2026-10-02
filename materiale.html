@@ -8,7 +8,7 @@
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#17212b;background:#eef2ed;line-height:1.45}
 *{box-sizing:border-box}body{margin:0}.wrap{max-width:960px;margin:auto;padding:0 16px 40px}
 header{background:linear-gradient(135deg,#123a5c,#176b69);color:#fff;padding:24px 0 22px}header .wrap{padding-bottom:0}h1{font-size:30px;line-height:1.15;margin:0 0 7px}
-h2{font-size:20px;margin:25px 0 10px}p{margin:6px 0}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.nav a{color:#fff;text-decoration:none;background:#ffffff18;border:1px solid #ffffff35;border-radius:8px;padding:7px 10px;font-weight:700;font-size:14px}
+h2{font-size:20px;margin:25px 0 10px}p{margin:6px 0}.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.nav a{display:inline-flex;align-items:center;gap:7px;color:#fff;text-decoration:none;background:#ffffff18;border:1px solid #ffffff35;border-radius:8px;padding:7px 10px;font-weight:700;font-size:14px}.ui-icon{width:17px;height:17px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .lead{color:#e9f1f7}.dashboard{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.metric{background:#fff;color:#17212b;border-radius:9px;padding:12px}.metric strong{display:block;font-size:21px;color:#183f63}
 .progress{height:10px;background:#dce3dd;border-radius:9px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;width:0;background:#16815f;transition:width .2s}
 .controls{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.controls button,.controls select,.controls input{font:inherit;border:1px solid #aab5ad;border-radius:7px;background:#fff;padding:8px 10px}.controls button{cursor:pointer}
@@ -21,9 +21,9 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:9px;over
 @media(max-width:680px){.wrap{padding-left:11px;padding-right:11px}header{padding-top:16px}h1{font-size:25px}.nav a{padding:8px 9px}.dashboard{grid-template-columns:1fr}.items,.pack{grid-template-columns:1fr}table{font-size:13px}th,td{padding:8px 6px}.hide-mobile{display:none}}
 @media print{header{background:#fff;color:#000;padding:0}.nav,.controls{display:none}.wrap{max-width:none}.items{grid-template-columns:1fr 1fr}details{break-inside:avoid}details:not([open])>*:not(summary){display:block}.notes{border:1px solid #aaa}}
 </style>
-<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Giro Garda"></head>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Giro Garda"></head>
 <body>
-<header><div class="wrap"><nav class="nav"><a href="index.html">⌂ Home</a><a href="tracce_gpx.html">⌖ Tracce GPX</a><a href="tappe.html">☰ Tappe</a><a href="materiale.html">🎒 Materiale</a><a href="check_serale.html">✓ Check serale</a><a href="servizi.html">⌕ Servizi</a></nav><h1>Materiale per il Grande Giro del Garda</h1><p class="lead">Checklist per nove giorni a piedi con pernottamento in struttura e zaino da 40 litri.</p>
+<header><div class="wrap"><nav class="nav"><a href="index.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg><span>Home</span></a><a href="tracce_gpx.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h4a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h8"/></svg><span>Tracce GPX</span></a><a href="tappe.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="4" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1" fill="currentColor" stroke="none"/><path d="M8 6h12M8 12h12M8 18h12"/></svg><span>Tappe</span></a><a href="materiale.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 7V5a4 4 0 0 1 8 0v2M9 21v-3h6v3"/><path d="M6 21V10a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v11zM6 13h12"/></svg><span>Materiale</span></a><a href="check_serale.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.6 2.6L16.5 9"/></svg><span>Check serale</span></a><a href="servizi.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/></svg><span>Servizi</span></a></nav><h1>Materiale per il Grande Giro del Garda</h1><p class="lead">Checklist per nove giorni a piedi con pernottamento in struttura e zaino da 40 litri.</p>
 <div class="dashboard"><div class="metric"><strong id="progressText">0 / 0</strong>elementi preparati<div class="progress"><span id="progressBar"></span></div></div><div class="metric"><strong>6,5–8 kg</strong>peso base consigliato</div><div class="metric"><strong id="totalWeight">9,4 kg</strong>stima con acqua e cibo</div></div></div></header>
 <main class="wrap">
 <div class="controls"><label>Acqua <select id="water"><option value="1.5">1,5 L</option><option value="2" selected>2 L</option><option value="2.5">2,5 L</option><option value="3">3 L</option></select></label><label>Cibo <input id="food" type="number" min="0.3" max="1.5" step="0.1" value="0.7" size="4"> kg</label><button id="reset">Azzera checklist</button><button onclick="window.print()">Stampa</button></div>
@@ -34,55 +34,54 @@ table{width:100%;border-collapse:collapse;background:#fff;border-radius:9px;over
 <label class="item"><input type="checkbox"><span>Scarpe da trail o trekking collaudate<small>Suola con buona presa sul bagnato.</small></span></label>
 <label class="item"><input type="checkbox"><span>Maglia tecnica traspirante</span></label>
 <label class="item"><input type="checkbox"><span>Pantaloni leggeri o convertibili</span></label>
-<label class="item"><input type="checkbox"><span>Intimo e calze tecniche</span></label>
-<label class="item"><input type="checkbox"><span>Cappellino</span></label>
+<label class="item"><input type="checkbox"><span>Calze tecniche</span></label>
+<label class="item"><input type="checkbox"><span>Cappellino e occhiali da sole</span></label>
+<label class="item"><input type="checkbox"><span>Bastoncini telescopici<small>Consigliati nelle tappe più ripide e sul bagnato.</small></span></label>
 </div></details>
 
 <details open><summary>Abbigliamento nello zaino</summary><div class="items">
 <label class="item"><input type="checkbox"><span>2 maglie tecniche di ricambio</span></label>
 <label class="item"><input type="checkbox"><span>1 maglia termica a maniche lunghe</span></label>
 <label class="item"><input type="checkbox"><span>Pile leggero</span></label>
+<label class="item"><input type="checkbox"><span>Giacca termica sintetica comprimibile</span></label>
 <label class="item"><input type="checkbox"><span>Guscio impermeabile con cappuccio</span></label>
 <label class="item"><input type="checkbox"><span>Sovrapantaloni impermeabili</span></label>
 <label class="item"><input type="checkbox"><span>3 paia di calze e 3 cambi intimo</span></label>
-<label class="item"><input type="checkbox"><span>Berretto leggero e guanti</span></label>
+<label class="item"><input type="checkbox"><span>Berretto leggero, guanti e buff</span></label>
 <label class="item"><input type="checkbox"><span>Abbigliamento leggero per la sera</span></label>
-<label class="item"><input type="checkbox"><span>Ciabatte leggere</span></label>
+<label class="item"><input type="checkbox"><span>Ciabatte o sandali leggeri</span></label>
+<label class="item"><input type="checkbox"><span>Ghette basse <small>Facoltative, utili con erba bagnata.</small></span></label>
 </div></details>
 
 <details open><summary>Acqua e alimentazione</summary><div class="items">
-<label class="item"><input type="checkbox"><span>2 borracce da 1/2 litro</span></label>
-<label class="item"><input type="checkbox"><span>Borraccia da 0,75 litri</span></label>
-<label class="item"><input type="checkbox"><span>Pranzo della giornata</span></label>
-<label class="item"><input type="checkbox"><span>Barrette di emergenza</span></label>
+<label class="item"><input type="checkbox"><span>2 borracce da 1 litro</span></label>
+<label class="item"><input type="checkbox"><span>Borraccia morbida da 0,5–1 litro<small>Per le tappe più lunghe o calde.</small></span></label>
+<label class="item"><input type="checkbox"><span>Pranzo compatto della giornata</span></label>
+<label class="item"><input type="checkbox"><span>3–4 snack accessibili</span></label>
+<label class="item"><input type="checkbox"><span>Due barrette di emergenza</span></label>
 <label class="item"><input type="checkbox"><span>Sali minerali</span></label>
-<label class="item"><input type="checkbox"><span>Orsetti gommosi</span></label>
-<label class="item"><input type="checkbox"><span>Contenitore pasti, coltello, cucchiaio e forchetta</span></label>
 </div></details>
 
 <details open><summary>Sicurezza e orientamento</summary><div class="items">
 <label class="item"><input type="checkbox"><span>Telefono con GPX e mappe offline</span></label>
 <label class="item"><input type="checkbox"><span>Lampada frontale</span></label>
-<label class="item"><input type="checkbox"><span>Coperta termica</span></label>
-<label class="item"><input type="checkbox"><span>Kit primo soccorso</span></label>
+<label class="item"><input type="checkbox"><span>Coperta termica e fischietto</span></label>
+<label class="item"><input type="checkbox"><span>Kit vesciche e primo soccorso</span></label>
+<label class="item"><input type="checkbox"><span>Farmaci personali</span></label>
+<label class="item"><input type="checkbox"><span>Crema solare e burrocacao</span></label>
 <label class="item"><input type="checkbox"><span>Documento, tessera sanitaria, carta e contanti</span></label>
 <label class="item"><input type="checkbox"><span>Numeri delle strutture e contatti di emergenza</span></label>
 </div></details>
 
 <details open><summary>Elettronica, igiene e pernottamento</summary><div class="items">
-<label class="item"><input type="checkbox"><span>Power bank</span></label>
+<label class="item"><input type="checkbox"><span>Power bank da 10.000 mAh</span></label>
 <label class="item"><input type="checkbox"><span>Caricatore e cavo corto</span></label>
-<label class="item"><input type="checkbox"><span>Kobo con libri e notizie</span></label>
 <label class="item"><input type="checkbox"><span>Custodia impermeabile per telefono</span></label>
 <label class="item"><input type="checkbox"><span>Beauty case in formato ridotto</span></label>
 <label class="item"><input type="checkbox"><span>Asciugamano in microfibra</span></label>
-<label class="item"><input type="checkbox"><span>Sapone di marsiglia, 2 saponette piccole, cotton fiocc, 2 mollette</span></label>
-<label class="item"><input type="checkbox"><span>Spazzolino e dentifricio, deodorante, shampoo</span></label>
-<label class="item"><input type="checkbox"><span>Salviette umidificate, fazzoletti di carta, burrocacao</span></label>
-<label class="item"><input type="checkbox"><span>Oki</span></label>
 <label class="item"><input type="checkbox"><span>Sacco impermeabile interno allo zaino</span></label>
 <label class="item"><input type="checkbox"><span>3 sacche: pulito, elettronica, bagnato</span></label>
-<label class="item"><input type="checkbox"><span>Sacchetto rifiuti</span></label>
+<label class="item"><input type="checkbox"><span>Sacchetto rifiuti e nastro telato</span></label>
 </div></details>
 
 <h2>Come distribuire i 40 litri</h2><div class="pack">
